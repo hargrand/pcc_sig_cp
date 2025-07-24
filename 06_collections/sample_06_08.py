@@ -7,8 +7,8 @@ print(student.get("address"))
 print(student.get("address", "dunno"))
 
 
-print(list(student.keys()))
-print(list(student.values()))
+print(tuple(student.keys()))
+print(set(student.values()))
 print(list(student.items()))
 
 for key, value in student.items():

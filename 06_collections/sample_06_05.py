@@ -14,3 +14,5 @@ print()
 sot = {(1, 2), (3, 4)}
 
 print(f"{sot=} / {len(sot)=}")
+
+print((1,3) in sot)
