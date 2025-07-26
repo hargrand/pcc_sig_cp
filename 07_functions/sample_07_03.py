@@ -1,19 +1,24 @@
-"""sample_07_03.py - Passing parameters"""
+"""sample_07_03.py - Using type hint and default values"""
 
 
-def double(a):
-    """Change a to be twice its current value"""
-    a += a
+def typed_greeting(name: str) -> str:
+    """
+    Build a greeting which can be used elsewhere with paramter and return types
+    specified
+    """
+    return f"1. Hello, {name}!"
 
 
-# Pass by value
-x = 3
-print(f"before: {x=}")
-double(x)
-print(f"after: {x=}")
+def default_greeting(name: str = "World") -> str:
+    """
+    Build a greeting which can be used elsewhere with paramter and return types
+    specified and a default value of the name argument is provided for
+    situations where no value is given when the function is called.
+    """
+    return f"2. Hello, {name}!"
 
-# Pass a reference as the value
-l = [1, 2, 3]
-print(f"before: {l=}")
-double(l)
-print(f"after: {l=}")
+
+print(typed_greeting("World"))
+print(default_greeting("Gus"))
+print(default_greeting())
+# print(default_greeting(4))
