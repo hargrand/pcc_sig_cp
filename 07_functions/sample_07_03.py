@@ -21,4 +21,4 @@ def default_greeting(name: str = "World") -> str:
 print(typed_greeting("World"))
 print(default_greeting("Gus"))
 print(default_greeting())
-# print(default_greeting(4))
+print(default_greeting(4))

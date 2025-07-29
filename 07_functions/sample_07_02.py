@@ -9,7 +9,7 @@ def add(a, b):
 print(add(3, 5))
 print(add(5.2, 4.9))
 print(add("Hello, ", "World!"))
-print(add(True, False))
+print(add(False, False))
 print(add([1, 2, 3], [4, 5, 6]))
 
 

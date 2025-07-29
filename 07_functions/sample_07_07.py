@@ -1,6 +1,6 @@
 """sample_07_05.py - Recursive functions"""
 
-MAX_VALUE = 100
+MAX_VALUE = 990
 
 
 def bad_sum_to_n(n: int) -> int:

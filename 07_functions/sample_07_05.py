@@ -1,6 +1,6 @@
 """sample_07_04.py - Some more advanced topics"""
 
-MAX_VALUE = 100
+MAX_VALUE = 1000
 
 
 def sum_to_n(n: int) -> int:
