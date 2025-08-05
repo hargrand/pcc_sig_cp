@@ -1,0 +1,10 @@
+"""sample_08_03.py - Tutle Graphics Draw a Triangle"""
+
+import turtle
+
+t = turtle.Turtle()
+for i in range(3):
+    t.forward(100)
+    t.left(120)
+
+turtle.done()
