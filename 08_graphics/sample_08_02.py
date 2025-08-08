@@ -4,7 +4,7 @@ import turtle
 import math
 
 t = turtle.Turtle()
-t.pensize(5)
+# t.pensize(5)
 
 t.radians()
 t.left(math.pi / 2.0)

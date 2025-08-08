@@ -9,7 +9,7 @@ def main():
 
     turtle.Screen().bgcolor("black")
     t.speed(speed=0)
-    t.pensize(1)
+    t.pensize(2)
 
     t.up()
     t.forward(100)
