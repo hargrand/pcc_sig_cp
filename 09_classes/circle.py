@@ -7,7 +7,7 @@ class Circle:
     """Defines a circle"""
 
     # Class variable
-    PI = math.pi
+    pi = math.pi
 
     def __init__(self, radius: float):
         """
@@ -22,17 +22,17 @@ class Circle:
         """
         Determine the area of the circle
         """
-        return Circle.PI * self.radius**2
+        return Circle.pi * self.radius**2
 
     def circumference(self) -> float:
         """
         Determine the circumference of the circle
         """
-        return 2 * Circle.PI * self.radius
+        return 2 * Circle.pi * self.radius
 
     @staticmethod
     def set_pi(value: float):
         """
         Set pi to be a new value
         """
-        Circle.PI = value
+        Circle.pi = value
