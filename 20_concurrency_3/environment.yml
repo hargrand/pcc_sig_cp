@@ -1,0 +1,8 @@
+name: mandelbrot-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.14
+  - pillow
+  - types-pillow
