@@ -1,4 +1,6 @@
-"""sample_20_06.py - Use multiprocessor Manager to share data between processes"""
+"""
+sample_20_06.py - Use multiprocessor Manager to share data between processes.
+"""
 
 import time
 import os
@@ -17,7 +19,8 @@ def worker(lock, process_id: int, shared_dict: dict):
             # Modify the shared dictionary
             shared_dict[f"process_{process_id}"] = (i, random.randint(1, 100))
             print(
-                f"[{os.getpid()}] Process {process_id} updated dict: {shared_dict.items()}"
+                f"[{os.getpid()}] Process {process_id} "
+                f"updated dict: {shared_dict.items()}"
             )
             time.sleep(0.1)  # Simulate work
         print(f"[{os.getpid()}] Process {process_id} released the lock.")
@@ -35,7 +38,8 @@ def main():
         print(f"Initial dictionary: {shared_dict.items()}")
 
         processes = [
-            Process(target=worker, args=(lock, i, shared_dict)) for i in range(3)
+            Process(target=worker, args=(lock, i, shared_dict))
+            for i in range(3)
         ]
 
         for p in processes:

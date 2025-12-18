@@ -17,10 +17,13 @@ def worker(lock, process_id: int):
         # The 'with' statement acquires the lock before entering the block
         # and releases it upon exiting.
         with lock:
-            print(f"[{os.getpid()}] Process {process_id} has the lock (iteration {i})")
-            print(f"[{os.getpid()}] Process {process_id} is doing some work...")
+            print(f"[{os.getpid()}] Process {process_id} "
+                  f"has the lock (iteration {i})")
+            print(f"[{os.getpid()}] Process {process_id} "
+                  "is doing some work...")
             time.sleep(random.uniform(0.1, 0.5))
-            print(f"[{os.getpid()}] Process {process_id} is releasing the lock")
+            print(f"[{os.getpid()}] Process {process_id} "
+                  "is releasing the lock")
         # Sleep outside the lock to allow other processes to run
         time.sleep(random.uniform(0.1, 0.2))
 
