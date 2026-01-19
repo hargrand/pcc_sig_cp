@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sig22"
+version = "0.1.0"
+description = "Python Crash Course SIG Code Project"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pylint",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "coverage",
+    "nose2"
+]
+
+[tool.mypy]
+python_version = "3.14"
+warn_return_any = true
+warn_unused_configs = true
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = "sample_22_01"
+ignore_missing_imports = true
+
+[tool.pylint.main]
+fail-under = 10
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+pythonpath = "src"
+testpaths = ["ut"]
